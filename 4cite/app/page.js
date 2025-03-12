@@ -35,7 +35,7 @@ export default function AuthPage() {
 
       if (!isRegister) {
         localStorage.setItem("token", data.token);
-        router.push("/dashboard");
+        router.push("/hotel");
       } else {
         setIsRegister(false);
       }
