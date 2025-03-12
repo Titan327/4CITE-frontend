@@ -92,7 +92,7 @@ export default function HotelDetails() {
                 key={room.id}
                 className="bg-white p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition"
               >
-                <Link href={`/room/${room.id}`}> {/* Utilisation de Link pour la redirection */}
+                <Link href={`/room/${room.id}?hotel_id=${hotel.id}`}> {/* Redirection avec l'ID de l'hôtel */}
                   <h3 className="text-xl font-semibold text-blue-600">{room.type_room}</h3>
                   <p className="text-lg text-gray-700">Capacité maximale: {room.max_nb_people} personnes</p>
                   <p className="text-gray-600">{room.description}</p>

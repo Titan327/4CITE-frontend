@@ -39,8 +39,8 @@ export default function MonCompte() {
   const handleSaveChanges = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3001/api/user/update", {
-        method: "PATCH",
+      const response = await fetch("http://localhost:3001/api/user/me", {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ export default function MonCompte() {
   const handleDeleteAccount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3001/api/user/delete", {
+      const response = await fetch("http://localhost:3001/api/user/me", {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
