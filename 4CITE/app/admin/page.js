@@ -7,7 +7,7 @@ export default function Admin() {
   const router = useRouter();
   const [role, setRole] = useState(null);
   const [users, setUsers] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); // Recherche d'utilisateur
+  const [searchTerm, setSearchTerm] = useState(""); 
   const token = localStorage.getItem("token");
   const [newHotel, setNewHotel] = useState({
     name: "",
@@ -163,7 +163,7 @@ export default function Admin() {
               <th className="border border-gray-300 px-4 py-2">ID</th>
               <th className="border border-gray-300 px-4 py-2">Nom</th>
               <th className="border border-gray-300 px-4 py-2">Email</th>
-              <th className="border border-gray-300 px-4 py-2">Actions</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -172,14 +172,7 @@ export default function Admin() {
       <td className="border border-gray-300 px-4 py-2">{user.id}</td>
       <td className="border border-gray-300 px-4 py-2">{user.name}</td>
       <td className="border border-gray-300 px-4 py-2">{user.email}</td>
-      <td className="border border-gray-300 px-4 py-2">
-        <button
-          onClick={() => handleEditUser(user.id)}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-        >
-          Modifier
-        </button>
-      </td>
+      
     </tr>
   ))}
 </tbody>
